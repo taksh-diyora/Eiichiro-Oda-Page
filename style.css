@@ -257,74 +257,85 @@ nav h3{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.anime-lists-container{
-    display: flex;
-    width: 100%;
-    height: 70vh;
+    gap: 4vh;
     flex-direction: column;
-    justify-content: space-between;
 }
 
-.anime-lists-container h1{
-    font-size: 3rem;    
-    font-weight: 500;
+.creations h1{
+    font-size: 3rem;
+    font-family: 'Osake';
 }
 
-.anime-cards-container{
-    overflow: auto;
-    height: 60vh;
+.anime-box-container{
+    height: 67vh;
+    width: 100%;
+    border: 2px solid rgb(182, 182, 182);
+    background-color: #171717;
+    border-radius: 10px;
     display: flex;
-    gap: 3vh;
+    align-items: center;
+    padding: 0 3.5vh;
+    gap: 3.5vh;
+    overflow: auto;
     scrollbar-width: none;
 }
 
 .anime-card{
+    height: 60vh;
+    width: 40vh;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid rgb(182, 182, 182);
+    flex-shrink: 0;
+}
+
+.upper-anime-card{
+    height: 5vh;
+    width: 100%;
+    border-bottom: 2px solid rgb(182, 182, 182);
+    padding: 0 1vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upper-anime-card h3{
+    font-size: 1rem;
+}
+
+.lower-anime-card{
+    height: 53vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 1vh 1vh;
     gap: 1vh;
-    width: 55vh;
-    background-color: rgba(128, 128, 128, 0.23);
-    height: 55vh;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    transition: all ease 0.5s;
+    position: relative;
 }
 
-.anime-card:hover{
-    scale: 105%;
-}
-
-.image-container{
-    width: 45vh;
-    height: 45vh;
+.lu-image-container{
+    width: 100%;
+    height: 30vh;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
 }
 
-.image-container img{
-    width: 100%;
+.lu-image-container img{
     height: 100%;
+    width: 100%;
     object-fit: cover;
+    object-position: 0 -8vh;
 }
 
-.anime-card h1{
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-align: center;
-}
-
-.image-overlay{
+.lu-image-overlay{
     position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.397);
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.368);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(1px);
     opacity: 0;
     transition: all ease 0.5s;
     display: flex;
@@ -332,13 +343,67 @@ nav h3{
     justify-content: center;
 }
 
-.image-overlay h4{
-    font-size: 1.5rem;
-    font-weight: 400;
+.play-button-img-card{
+    height: 5vh;
+    width: 5vh;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 3px;
 }
 
-.image-container:hover .image-overlay{
+.lu-image-container:hover .lu-image-overlay{
     opacity: 1;
+}
+
+.ll-image-container{
+    width: 100%;
+    height: 15vh;
+}
+
+.ll-image-container img{
+    width: 100%;
+    height: 100%;
+}
+
+.lower-anime-card p{
+    font-size: 0.8rem;
+    margin: 0 1vh;
+}
+
+.progress-anime{
+    width: 40%;
+    height: 3px;
+    display: flex;
+    align-items: center;
+    margin: 1vh 1vh 0vh 1vh;
+}
+
+.current-progress{
+    height: 3px;
+    width: 50%;
+    background-color: gray;
+}
+
+.total-progress{
+    height: 1px;
+    width: 50%;
+    background-color: gray;
+}
+
+.floating-number{
+    position: absolute;
+    bottom: -3%;
+    right: -1%;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8vh 1.6vh;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
 .comments{
