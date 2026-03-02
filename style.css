@@ -37,6 +37,7 @@ html, body {
     width: 100%;
     position: relative;
     background: transparent;
+    overflow: hidden;
 }
 
 .agency{
@@ -187,6 +188,32 @@ nav h3{
     flex-direction: column;
     background-color: black;
     justify-content: space-between;
+    position: relative;
+}
+
+.intro-img{
+    position: absolute;
+    height: 90vh;
+    width: 90vh;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+.intro-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: image-rt infinite linear 7s;
+}
+
+@keyframes image-rt {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
 }
 
 .intro-top{
