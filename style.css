@@ -1,0 +1,453 @@
+@font-face{
+    font-family: 'Osake';
+    src: url(./Font/Osake.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Sukajan';
+    src: url(./Font/Sukajan.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Namistre';
+    src: url(./Font/namistre.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  scrollbar-width: none;
+}
+
+.wrapper{
+    width: 100%;
+    position: relative;
+    background: transparent;
+}
+
+.agency{
+    width: 100%;
+    background: transparent;
+}
+
+nav{
+    width: 100%;
+    height: 7vh;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 0vh 3vh;
+    z-index: 10;
+}
+
+.left-nav{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.left-nav h3{
+    font-family: 'Sukajan';
+}
+
+.right-nav{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+}
+
+.right-nav h3:hover{
+    color: #00b9b7;
+    scale: 102%;
+}
+
+nav h3{
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+    transition: all ease 0.5s;
+}
+
+.hero{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.background-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.headline-marquee{
+    width: 100%;
+    height: 50vh;
+}
+
+.hero-content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 3vh;
+    overflow: hidden;
+}
+
+.marquee-hero{
+    display: flex;
+    animation: hero-m 15s infinite linear;
+    mix-blend-mode: difference;
+}
+
+@keyframes hero-m {
+    0%{
+        transform: translateX(calc(4% - 3px));
+    }
+    100%{
+        transform: translateX(calc(-130% + 3px));
+    }   
+}
+
+.marquee-hero h1{
+    width: auto;
+    font-size: 300px;
+    flex-shrink: 0;
+    color: rgb(204, 204, 204);
+    font-family: 'Namistre';
+}
+
+.hero-bottom{
+    display: flex;
+    width: 100%;
+    padding: 0 3vh;
+    justify-content: space-between;
+    margin-bottom: 4vh;
+    align-items: flex-end;
+    z-index: 2;
+}
+
+.hero-bottom-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.hero-bottom h3, .hero-bottom h1{
+    font-weight: 300;
+}
+
+.hero-bottom h3{
+    font-size: 0.9rem;
+    font-family: 'Sukajan';
+}
+
+.hero-bottom h1{
+    font-family: 'Sukajan';
+    font-size: 3rem;
+}
+
+.intro-sec{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    justify-content: space-between;
+}
+
+.intro-top{
+    margin: 17vh 0 0 15vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-top h1{
+    font-size: 85px;
+    line-height: calc(5rem + 5px);
+    font-weight: 600;
+}
+
+.intro-top h1 span{
+    font-family: 'Sukajan';
+}
+
+.intro-bottom{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 0 10vh 15vh;
+    gap: 3vh;
+}
+
+.intro-bottom p{
+    font-size: 1.1rem;
+}
+
+.intro-bottom h4{
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.creations{
+    height: 100vh;
+    width: 100%;
+    padding: 0vh 3vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anime-lists-container{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.anime-lists-container h1{
+    font-size: 3rem;    
+    font-weight: 500;
+}
+
+.anime-cards-container{
+    overflow: auto;
+    height: 60vh;
+    display: flex;
+    gap: 3vh;
+    scrollbar-width: none;
+}
+
+.anime-card{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    width: 55vh;
+    background-color: rgba(128, 128, 128, 0.23);
+    height: 55vh;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all ease 0.5s;
+}
+
+.anime-card:hover{
+    scale: 105%;
+}
+
+.image-container{
+    width: 45vh;
+    height: 45vh;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.anime-card h1{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.image-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.368);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    transition: all ease 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-overlay h4{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.image-container:hover .image-overlay{
+    opacity: 1;
+}
+
+.comments{
+    height: 80vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 0vh 3vh;
+    gap: 5vh;
+}
+
+.comments h1{
+    font-size: 3rem;
+    font-family: 'Osake';
+    font-weight: 400;
+}
+
+.comments-container{
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    gap: 5vh;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.comment-card{
+    width: 50vh;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 3vh;
+    flex-shrink: 0;
+}
+
+.comment-pfp{
+    top: 13%;
+    left: 0;
+    position: absolute;
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pfp-container{
+    border: 3px solid #069beb;
+    border-radius: 50%;
+    width: 12vh;
+    height: 12vh;
+    overflow: hidden;
+}
+
+.pfp-container img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.upper-comment{
+    width: 100%;
+    height: 35vh;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5vh;
+    border: 2px solid gray;
+    border-bottom: none;
+}
+
+.up-c h3{
+    font-size: 5rem;
+    font-family: 'Osake';
+    line-height: 40%;
+    margin-top: 5vh;
+    color: #069beb;
+}
+
+.low-c{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+
+.low-c h3{
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.low-c p{
+    text-align: center;
+    color: black;
+}
+
+.lower-comment{
+    height: auto;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border: 2px solid gray;
+    border-top: none;
+}
+
+.lower-comment h3{
+    font-size: 2.5rem;    
+    width: 100%;
+    text-align: center;
+    color: #f7b71d;
+}
+
+footer{
+    height: 80vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 3vh 1vh 3vh;
+}
+
+.left-footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.left-footer h1{
+    font-size: 9rem;
+    font-family: 'Sukajan';
+}
+
+.right-footer{
+    display: flex;
+    gap: 3vh;
+}
+
+.right-footer h2{
+    font-size: 1rem;
+    font-weight: 400;
+}
