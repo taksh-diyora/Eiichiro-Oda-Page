@@ -521,31 +521,154 @@ nav h3{
 }
 
 footer{
-    height: 80vh;
+    height: auto;
     width: 100%;
     background-color: black;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 0 3vh 1vh 3vh;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 10vh 0 0 0;
+    gap: 5vh;
 }
 
-.left-footer{
+.footer-marquee{
+    display: flex;
+    z-index: 2;
+    width: 100%;
+    animation: footer-scroll 12s infinite linear;
+}
+
+@keyframes footer-scroll {
+    0%{
+        transform: translateX(2%);
+    }
+    100%{
+        transform: translateX(calc(-102% + 8px));
+    }
+}
+
+.footer-marquee h1{
+    font-size: 10rem;
+    font-family: 'Namistre';
+    flex-shrink: 0;
+    color: #d6d5d6;
+    line-height: 100%;
+}
+
+.footer-content{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    z-index: 2;
+    padding: 0 3vh;
+}
+
+.footer-card{
+    width: 30vh;
+    height: 30vh;
+    border: 2px solid rgb(182, 182, 182);
+    border-radius: 20px;
+    background-color: #171717;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+    padding: 3vh;
+    position: relative;
+    overflow: hidden;
+    transition: all ease 0.5s;
 }
 
-.left-footer h1{
+.footer-card:hover{
+    scale: 104%;
+    border: 2px solid #d6d5d6;
+}
+
+.footer-card:hover .footer-quote{
+    opacity: 1;
+}
+
+.footer-quote{
+    position: absolute;
+    top: 1vh;
+    left: 2vh;
+    font-size: 4rem;
+    font-family: 'Osake';
+    color: #069beb;
+    line-height: 40%;
+    opacity: 0.3;
+    transition: all ease 0.5s;
+}
+
+.footer-card h2{
+    font-size: 2rem;
+    font-family: 'Sukajan';
+    color: #d6d5d6;
+}
+
+.footer-card p{
+    font-size: 0.9rem;
+    text-align: center;
+    color: rgb(203, 203, 203);
+}
+
+.footer-mid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-big-text{
     font-size: 9rem;
     font-family: 'Sukajan';
+    line-height: 90%;
+    color: #a6a6a6;
+    transition: all ease 0.5s;
 }
 
-.right-footer{
+.footer-big-text:hover{
+    color: white;
+    scale: 102%;
+}
+
+.footer-links{
     display: flex;
-    gap: 3vh;
+    gap: 5vh;
+    z-index: 2;
+    padding: 0 3vh;
 }
 
-.right-footer h2{
+.footer-links h3{
     font-size: 1rem;
     font-weight: 400;
+    color: rgb(203, 203, 203);
+    transition: all ease 0.5s;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-links h3:hover{
+    color: #d6d5d6;
+    scale: 103%;
+}
+
+.footer-bottom-bar{
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3vh;
+    border-top: 1px solid rgb(182, 182, 182);
+    z-index: 2;
+}
+
+.footer-bottom-bar h3{
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: rgb(182, 182, 182);
 }
