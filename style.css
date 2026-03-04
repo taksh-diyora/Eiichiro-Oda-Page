@@ -19,6 +19,16 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'picky';
+    src: url(./Font/pickystyle.otf);
+}
+
+@font-face {
+    font-family: 'ele';
+    src: url(./Font/eleanora.regular.otf);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -247,6 +257,208 @@ nav h3{
 .intro-bottom h4{
     font-weight: 400;
     font-size: 1.1rem;
+}
+
+.journey{
+    height: calc(117vh - 6px);
+    width: 100%;
+    background-image: url(./images/journey/bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: black;
+    position: relative;
+}
+
+.journey-card, .journey-c{
+    position: absolute;
+    transition: all ease 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.journey-card-1{
+    top: 24%;
+}
+.journey-card{
+    height: 13vh;
+    width: 40vh;
+    right: 51%;
+}
+.journey-c{
+    height: 13vh;
+    width: 40vh;
+    left: 52%;
+}
+.journey-card-2{
+    top: 39%;
+}
+
+.journey-card-3{
+    top: 45%;
+}
+
+.journey-card-4{
+    top: 57%;
+}
+
+.journey-card-5{
+    top: 65%;
+}
+.journey-card-6{
+    top: 76%;
+}
+
+.journey-card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+}
+.journey-c img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+}
+
+.journey-card:hover{
+    scale: 200%;
+    right: calc(58% + 3px);
+    z-index: 10;
+}
+
+.journey-c:hover{
+    scale: 200%;
+    left: calc(59% + 3px);
+    z-index: 10;
+}
+
+.hehe-container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-hover-journey{
+    z-index: 1;
+    position: relative;
+    width: 80%;
+    height: 7vh;
+    overflow: hidden;
+}
+
+.nh-container{
+    position: absolute;
+    height: fit-content;
+    width: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all ease 0.3s;
+}
+
+.nh-container h1{
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: 'picky';
+    color: #413b2c;
+}
+
+.journey-card:hover .nh-container{
+    top: -100%;
+}
+.journey-c:hover .nh-container{
+    top: -100%;
+}
+
+.overlay-journey{
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 1vh 1vh;
+    justify-content: space-between;
+    overflow: hidden;
+    gap: 2vh;
+}
+
+.jc-img-container{
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+
+.jc-img-container img{
+    border: 1px solid #242017;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+
+.journey-card:hover .jc-img-container img{
+    opacity: 1;
+}
+.journey-c:hover .jc-img-container img{
+    opacity: 1;
+}
+
+.jc-text{
+    width: calc(60% - 1vh);
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.jc-text h1{
+    font-size: 1rem;
+    font-family: 'ele';
+    color: #242017;
+}
+.jc-text h2{
+    font-size: 0.6rem;
+    font-family: 'ele';
+    color: #242017;
+}
+
+.jc-no-hover{
+    height: 2.8vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.jc-no-hover1{
+    height: 1.5vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.overlay-jc{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all ease 0.4s;
+    top: -100%;
+    opacity: 0;
+}
+
+.journey-card:hover .overlay-jc{
+    opacity: 1;
+    top: 0;
+}
+.journey-c:hover .overlay-jc{
+    opacity: 1;
+    top: 0;
 }
 
 .creations{
@@ -651,7 +863,7 @@ footer{
 }
 
 .footer-links h3:hover{
-    color: #d6d5d6;
+    color: #00b9b7;
     scale: 103%;
 }
 
