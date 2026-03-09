@@ -88,6 +88,10 @@ nav{
     gap: 2vh;
 }
 
+.right-nav h3{
+    cursor: pointer;
+}
+
 .right-nav h3:hover{
     color: #00b9b7;
     scale: 102%;
@@ -275,6 +279,7 @@ nav h3{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .journey-card-1{
@@ -548,6 +553,7 @@ nav h3{
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
 }
 
 .lu-image-container img{
@@ -877,6 +883,7 @@ footer{
     color: rgb(203, 203, 203);
     transition: all ease 0.5s;
     border-bottom: 1px solid transparent;
+    cursor: pointer;
 }
 
 .footer-links h3:hover{
